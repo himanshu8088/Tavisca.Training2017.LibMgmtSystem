@@ -12,7 +12,7 @@ namespace LibraryMgmtSystem
         private List<IBook> _issueList = new List<IBook>();
         private IRegister _register;
         private IIssueSystem _issueSystem;
-        private KeyValuePair<Generes, IBook> _bookCategory;
+        private KeyValuePair<Generes, IBook> _bookCategory;        
 
         public Library(IIssueSystem issueSystem, IRegister register)
         {
@@ -40,9 +40,9 @@ namespace LibraryMgmtSystem
                 
         }
 
-        public void IssueBook(_issueList)
+        public void IssueBook(List<IBook> _issueList)
         {
-
+            _issueSystem.Issue(_issueList,_register);
         }
         public List<IBook> GetIssuedBooks()
         {

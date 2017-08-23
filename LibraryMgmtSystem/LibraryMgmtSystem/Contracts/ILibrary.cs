@@ -18,6 +18,6 @@ namespace LibraryMgmtSystem
         void CategoriseBook(IBook book);
         void AddBookToLib(IBook book);
         void AddToIssueList(IBook book);
-        void IssueBook()
+        void IssueBook(List<IBook> _issueList);
     }
 }
