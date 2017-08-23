@@ -23,5 +23,10 @@ namespace LibraryMgmtSystem.Model
         public string Edition { get; private set; }
 
         public DiscriptionTag Discription { get; private set; }
+
+        public override string ToString()
+        {
+            return $"Book Title:{Title} Publisher:{Publisher} Edition:{Edition}";
+        }
     }
 }
