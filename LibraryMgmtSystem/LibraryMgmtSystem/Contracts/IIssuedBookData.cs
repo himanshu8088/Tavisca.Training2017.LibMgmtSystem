@@ -6,6 +6,6 @@ namespace LibraryMgmtSystem
     {
         System.DateTime DateOfIssue { get; }
         System.Guid To { get; }
-        List<IBook> Books { get; }
+        List<Book> Books { get; }
     }
 }

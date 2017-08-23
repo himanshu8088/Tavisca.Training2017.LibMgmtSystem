@@ -8,39 +8,39 @@ namespace LibraryMgmtSystem
 {
     public class Library : ILibrary
     {
-        private List<IBook> _books = new List<IBook>();
-        private List<IBook> _issueList = new List<IBook>();
+        private List<Book> _books = new List<Book>();
+        private List<Book> _issueList = new List<Book>();
         private IRegister _register;
         private IIssueSystem _issueSystem;
-        private KeyValuePair<Generes, IBook> _bookCategory;        
+        private KeyValuePair<Genere, Book> _bookCategory;        
 
         public Library(IIssueSystem issueSystem, IRegister register)
         {
             _issueSystem = issueSystem;
             _register = register;
         }
-        public KeyValuePair<Generes, IBook> BookCategory => _bookCategory;
+        public KeyValuePair<Genere, Book> BookCategory => _bookCategory;
 
-        public List<IBook> Books => _books;
+        public List<Book> Books => _books;
 
         public IRegister IssueRegister => _register;
 
-        public void AddBookToLib(IBook book)
+        public void AddBookToLib(Book book)
         {
             _books.Add(book);
         }
 
-        public void AddToIssueList(IBook book)
+        public void AddToIssueList(Book book)
         {
             _issueList.Add(book);
         }
 
-        public void CategoriseBook(IBook book)
+        public void CategoriseBook(Book book)
         {   
                 
         }
 
-        public void IssueBook(List<IBook> _issueList)
+        public void IssueBook()
         {
             _issueSystem.Issue(_issueList,_register);
         }

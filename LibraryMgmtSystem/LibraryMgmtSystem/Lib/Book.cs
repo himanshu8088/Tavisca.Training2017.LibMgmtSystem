@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LibraryMgmtSystem.Model
+namespace LibraryMgmtSystem
 {
-    public class Book : IBook
+    public class Book
     {
-        public Book(string title,string publisher,string edition, DiscriptionTag tag)
+        public Book(string title,string publisher,string edition, Genere tag)
         {
             Title = title;
             Publisher = publisher;
@@ -22,7 +22,7 @@ namespace LibraryMgmtSystem.Model
 
         public string Edition { get; private set; }
 
-        public DiscriptionTag Discription { get; private set; }
+        public Genere Discription { get; private set; }
 
         public override string ToString()
         {

@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace LibraryMgmtSystem
 {
-    public enum Generes { Technical, Fiction,Horror}
+    public enum Genere { Technical, Fiction,Horror}
 
     public interface ILibrary
     {
-        KeyValuePair<Generes, IBook> BookCategory { get; } 
-        List<IBook> Books { get;}
+        KeyValuePair<Genere, Book> BookCategory { get; } 
+        List<Book> Books { get;}
         IRegister IssueRegister { get; }                
-        void CategoriseBook(IBook book);
-        void AddBookToLib(IBook book);
-        void AddToIssueList(IBook book);
-        void IssueBook(List<IBook> _issueList);
+        void CategoriseBook(Book book);
+        void AddBookToLib(Book book);
+        void AddToIssueList(Book book);
+        void IssueBook(List<Book> _issueList);
     }
 }

@@ -8,7 +8,7 @@ namespace LibraryMgmtSystem
 {
     public class LibraryIssueSystem : IIssueSystem
     {
-        public void Issue(List<IBook> books, IRegister register)
+        public void Issue(List<Book> books, IRegister register)
         {
             IssuedBookData data = new IssuedBookData(DateTime.Now, Guid.NewGuid(), books);
             register.AddEntry(data);

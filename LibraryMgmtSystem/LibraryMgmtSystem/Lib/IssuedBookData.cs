@@ -8,19 +8,17 @@ namespace LibraryMgmtSystem
 {
     public class IssuedBookData : IIssuedBookData
     {        
-        public IssuedBookData(DateTime dateOfIssue, System.Guid to, List<IBook> books)
+        public IssuedBookData(DateTime dateOfIssue, System.Guid to, List<Book> books)
         {
             DateOfIssue = dateOfIssue;
             To = to;
             Books = books;
         }
 
-        public DateTime DateOfIssue { get; private set; }
+        public DateTime DateOfIssue { get; private set; }        
 
-        public System.Guid To { get; private set; };
+        public List<Book> Books { get; private set; }
 
-        public List<IBook> Books { get; private set; }
-
-        Guid IIssuedBookData.To => throw new NotImplementedException();
+        public System.Guid To { get; private set; }
     }
 }

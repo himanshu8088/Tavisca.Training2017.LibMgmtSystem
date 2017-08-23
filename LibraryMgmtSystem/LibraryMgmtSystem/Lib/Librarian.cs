@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace LibraryMgmtSystem
 {
-    public interface IIssueSystem
+    public class Librarian
     {
-        void Issue(List<Book> books,IRegister register);
     }
 }

@@ -40,7 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contracts\IBook.cs" />
     <Compile Include="Contracts\ILibrary.cs" />
     <Compile Include="Contracts\IRegister.cs" />
     <Compile Include="Contracts\IIssuedBookData.cs" />
