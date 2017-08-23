@@ -10,13 +10,12 @@ namespace LibraryMgmtSystem
 
     public interface ILibrary
     {
-        KeyValuePair<Generes, List<IBook>> BookCategory { get; } 
+        KeyValuePair<Generes, IBook> BookCategory { get; } 
         List<IBook> Books { get;}
-        IRegister IssueRegister { get; }
-        List<IBook> IssueList { get; }
+        IRegister IssueRegister { get; }        
 
-        List<IBook> GetIssuedBook();
-        void CategoriseBook();
+        List<IBook> GetIssuedBooks();
+        void CategoriseBook(IBook book);
         void AddBookToLib(IBook book);
         void AddToIssueList(IBook book);
     }

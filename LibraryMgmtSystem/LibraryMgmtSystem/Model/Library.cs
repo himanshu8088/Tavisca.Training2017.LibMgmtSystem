@@ -9,14 +9,21 @@ namespace LibraryMgmtSystem
     public class Library : ILibrary
     {
         private List<IBook> _books = new List<IBook>();
+        private List<IBook> _issueList = new List<IBook>();
+        private IRegister _register;
+        private IIssueSystem _issueSystem;
+        private KeyValuePair<Generes, IBook> _bookCategory;
 
-        public KeyValuePair<Generes, List<IBook>> BookCategory => throw new NotImplementedException();
+        public Library(IIssueSystem issueSystem, IRegister register)
+        {
+            _issueSystem = issueSystem;
+            _register = register;
+        }
+        public KeyValuePair<Generes, IBook> BookCategory => _bookCategory;
 
         public List<IBook> Books => _books;
 
-        public IRegister IssueRegister => throw new NotImplementedException();
-
-        public List<IBook> IssueList => throw new NotImplementedException();
+        public IRegister IssueRegister => _register;
 
         public void AddBookToLib(IBook book)
         {
@@ -25,17 +32,26 @@ namespace LibraryMgmtSystem
 
         public void AddToIssueList(IBook book)
         {
-            throw new NotImplementedException();
+            _issueList.Add(book);
         }
 
-        public void CategoriseBook()
-        {
-            throw new NotImplementedException();
+        public void CategoriseBook(IBook book)
+        {   
+                
         }
 
-        public List<IBook> GetIssuedBook()
+        public List<IBook> GetIssuedBooks()
         {
-            throw new NotImplementedException();
+            List<IIssuedBookData> dataList = _register.IssuedBooks;
+            List<IBook> issuedBooks = new List<IBook>();
+            foreach (IIssuedBookData data in dataList)
+            {
+                foreach (IBook book in data.Books)
+                {
+                    issuedBooks.Add(book); 
+                }
+            }
+            return issuedBooks;
         }
     }
 }

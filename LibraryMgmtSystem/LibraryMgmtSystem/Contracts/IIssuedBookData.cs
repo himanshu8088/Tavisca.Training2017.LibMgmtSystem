@@ -5,7 +5,7 @@ namespace LibraryMgmtSystem
     public interface IIssuedBookData
     {
         System.DateTime DateOfIssue { get; }
-        int To { get; }
+        System.Guid To { get; }
         List<IBook> Books { get; }
     }
 }
