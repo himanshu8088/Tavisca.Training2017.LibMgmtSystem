@@ -44,20 +44,6 @@ namespace LibraryMgmtSystem
         {
             _issueSystem.Issue(_issueList,_register);
         }
-        public List<IBook> GetIssuedBooks()
-        {
-            List<IIssuedBookData> dataList = _register.IssuedBooks;
-            List<IBook> issuedBooks = new List<IBook>();
-            foreach (IIssuedBookData data in dataList)
-            {
-                foreach (IBook book in data.Books)
-                {
-                    issuedBooks.Add(book); 
-                }
-            }
-            return issuedBooks;
-        }
-
         
     }
 }

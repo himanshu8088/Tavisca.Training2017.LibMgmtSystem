@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 namespace LibraryMgmtSystem
 {
     public class IssuedBookData : IIssuedBookData
-    {
-        
+    {        
         public IssuedBookData(DateTime dateOfIssue, System.Guid to, List<IBook> books)
         {
             DateOfIssue = dateOfIssue;

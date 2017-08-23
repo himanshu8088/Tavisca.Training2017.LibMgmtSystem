@@ -12,9 +12,7 @@ namespace LibraryMgmtSystem
     {
         KeyValuePair<Generes, IBook> BookCategory { get; } 
         List<IBook> Books { get;}
-        IRegister IssueRegister { get; }        
-
-        List<IBook> GetIssuedBooks();
+        IRegister IssueRegister { get; }                
         void CategoriseBook(IBook book);
         void AddBookToLib(IBook book);
         void AddToIssueList(IBook book);
