@@ -44,11 +44,12 @@
     <Compile Include="Contracts\IRegister.cs" />
     <Compile Include="Contracts\IIssuedBookData.cs" />
     <Compile Include="Contracts\IIssueSystem.cs" />
-    <Compile Include="Model\Book.cs" />
-    <Compile Include="Model\IssuedBookData.cs" />
-    <Compile Include="Model\Library.cs" />
-    <Compile Include="Model\LibraryIssueSystem.cs" />
-    <Compile Include="Model\LibraryRegister.cs" />
+    <Compile Include="Lib\Librarian.cs" />
+    <Compile Include="Lib\Book.cs" />
+    <Compile Include="Lib\IssuedBookData.cs" />
+    <Compile Include="Lib\Library.cs" />
+    <Compile Include="Lib\LibraryIssueSystem.cs" />
+    <Compile Include="Lib\LibraryRegister.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
