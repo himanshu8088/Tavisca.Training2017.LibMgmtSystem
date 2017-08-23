@@ -40,6 +40,10 @@ namespace LibraryMgmtSystem
                 
         }
 
+        public void IssueBook(_issueList)
+        {
+
+        }
         public List<IBook> GetIssuedBooks()
         {
             List<IIssuedBookData> dataList = _register.IssuedBooks;

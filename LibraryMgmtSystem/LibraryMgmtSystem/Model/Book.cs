@@ -8,6 +8,11 @@ namespace LibraryMgmtSystem.Model
 {
     public class Book : IBook
     {
+        public Book()
+        {
+                
+        }
+
         public string Title { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public string Publisher { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public string Edition { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
