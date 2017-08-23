@@ -4,9 +4,9 @@
 
     public interface IBook
     {
-        string Title { get; set; }
-        string Publisher { get; set; }
-        string Edition { get; set; }
-        DiscriptionTag Discription { get; set; }
+        string Title { get; }
+        string Publisher { get; }
+        string Edition { get; }
+        DiscriptionTag Discription { get; }
     }
 }
