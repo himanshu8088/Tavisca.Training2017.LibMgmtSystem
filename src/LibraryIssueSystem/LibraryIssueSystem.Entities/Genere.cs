@@ -4,10 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LibraryMgmtSystem
+namespace LibraryIssueSystem.Entities
 {
-    public interface IIssueSystem
+    public enum Genere
     {
-        void Issue(List<Book> books,IRegister register);
+        Horror,
+        Fiction,
+        Technical,
+        Buiseness
     }
 }

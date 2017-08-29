@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LibraryMgmtSystem
+namespace LibraryIssueSystem.Entities
 {
-    public class Librarian
+    public class Library
     {
+        public List<Shelf> BookShelves { get; set; }
     }
 }
