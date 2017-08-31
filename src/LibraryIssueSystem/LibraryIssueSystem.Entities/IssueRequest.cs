@@ -14,7 +14,7 @@ namespace LibraryIssueSystem.Entities
             MemberId = memberId;
         }
 
-        List<Book> Books { get;}
-        int MemberId { get; }
+        public List<Book> Books { get;}
+        public int MemberId { get; }
     }
 }

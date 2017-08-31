@@ -40,12 +40,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Implementation\BookIssueSystem.cs" />
+    <Compile Include="Contracts\ICollection.cs" />
+    <Compile Include="Contracts\ILibraryRepository.cs" />
+    <Compile Include="Contracts\IBookIssueSystem.cs" />
+    <Compile Include="Contracts\ILibraryManager.cs" />
+    <Compile Include="LibrarySystem.cs" />
+    <Compile Include="Provider\GenereProvider.cs" />
+    <Compile Include="Repository\GenereRepository.cs" />
+    <Compile Include="Repository\BookRepository.cs" />
+    <Compile Include="Manager\GenereManager.cs" />
+    <Compile Include="Manager\BookManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Contracts\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\LibraryIssueSystem.Entities\LibraryIssueSystem.Entities.csproj">
       <Project>{4a316c03-084a-490f-9919-13027fb101d2}</Project>

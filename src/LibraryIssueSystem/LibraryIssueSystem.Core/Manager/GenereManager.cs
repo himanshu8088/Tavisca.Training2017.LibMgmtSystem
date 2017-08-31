@@ -4,29 +4,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LibraryIssueSystem.Entities;
+using LibraryIssueSystem.Core.Repository;
 
-namespace LibraryIssueSystem.Entities
+namespace LibraryIssueSystem.Core.Manager
 {
-    public class LibraryManager
+    public class GenereManager
     {
-        private Shelf _shelf;                
+        private GenereRepository _repo;
 
-        public LibraryManager(Shelf shelf)
+        public GenereManager(GenereRepository repo)
         {
-            _shelf = shelf;
+            _repo = repo;
         }
 
         public void Add(Book book)
         {
-            if (book.Discription == "Technical")
-            {                
-                _shelf.Books.Add(book);
-            }            
+            throw new NotImplementedException();
         }
-
+       
         public void Remove(Book book)
         {
             throw new NotImplementedException();
-        }
+        }        
     }
 }
